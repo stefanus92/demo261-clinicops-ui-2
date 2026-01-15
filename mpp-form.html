@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Candidate Form • MPP • ClinicOps</title>
+<link rel="stylesheet" href="assets/adminlte.css">
+</head>
+<body>
+<div class="wrapper">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">C</div>
+      <div>
+        <div class="title">ClinicOps</div>
+        <div class="sub">Demo UI • fokus: Sales Lead & MPP</div>
+      </div>
+    </div>
+    <div class="nav">
+      <div class="section">Sales Lead & Pricing</div>
+<a class="" href="index.html"><span style="width:18px;display:inline-block">📊</span> Dashboard (Sales)</a>
+<a class="" href="pipeline.html"><span style="width:18px;display:inline-block">🧩</span> Pipeline</a>
+<a class="" href="leads.html"><span style="width:18px;display:inline-block">🧾</span> Leads</a>
+<a class="" href="lead-detail.html"><span style="width:18px;display:inline-block">🔎</span> Lead Detail</a>
+<a class="" href="lead-form.html"><span style="width:18px;display:inline-block">📝</span> Lead Form</a>
+<a class="" href="pricing.html"><span style="width:18px;display:inline-block">🧮</span> Pricing & Calculator</a>
+<div class="section">MPP (Manpower)</div>
+<a class="" href="mpp.html"><span style="width:18px;display:inline-block">👥</span> MPP Dashboard</a>
+<a class="" href="mpp-demand.html"><span style="width:18px;display:inline-block">📌</span> Kebutuhan vs Siap</a>
+<a class="" href="mpp-candidates.html"><span style="width:18px;display:inline-block">📋</span> Candidates</a>
+<a class="" href="mpp-candidate-detail.html"><span style="width:18px;display:inline-block">🔎</span> Candidate Detail</a>
+<a class="active" href="mpp-form.html"><span style="width:18px;display:inline-block">🧑‍⚕️</span> Candidate Form</a>
+<div class="section">Catatan</div>
+<div style="padding:0 12px 14px 12px" class="muted">Prototype UI untuk presentasi (tanpa backend). Implementasi Yii2: GridView, ActiveForm, kalkulasi corporate scoring & management fee, pipeline, serta dashboard ringkasan.</div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="navbar">
+      <div style="display:flex;flex-direction:column;gap:2px">
+        <div><b>ClinicOps Prototype</b></div>
+        <div class="muted">Demo UI • fokus: Sales Lead & MPP</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px">
+        <div class="search">
+          🔎 <input placeholder="Cari perusahaan / kandidat / lokasi…">
+        </div>
+        <div class="toolbar">
+          <a class="btn btn-outline" href="leads.html">Leads</a>
+          <a class="btn btn-outline" href="mpp.html">MPP</a>
+          <a class="btn btn-primary" href="mpp-form.html">Add</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="card">
+  <div class="card-header">
+    <span>Candidate Form</span>
+    <span class="badge badge-info">Input kandidat</span>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col"><div class="muted">Nama Lengkap</div><input></div>
+      <div class="col"><div class="muted">Role</div><select><option>Dokter</option><option>Perawat</option><option>EMT</option><option>Admin</option></select></div>
+      <div class="col"><div class="muted">Status Proses</div><select><option>Applied</option><option>Screening</option><option selected>Interview</option><option>Passed</option><option>Offer</option><option>Joined</option></select></div>
+      <div class="col"><div class="muted">Lokasi Preferensi</div><input placeholder="contoh: Jakarta"></div>
+    </div>
+
+    <div class="row" style="margin-top:10px">
+      <div class="col"><div class="muted">Tanggal Interview</div><input type="date"></div>
+      <div class="col"><div class="muted">Hasil Interview</div><select><option>—</option><option>Lulus</option><option>Tidak Lulus</option><option>Pending</option></select></div>
+      <div class="col"><div class="muted">ACLS</div><select><option>Sudah</option><option selected>Belum</option><option>Tidak diperlukan</option></select></div>
+      <div class="col"><div class="muted">EMT</div><select><option>Lulus</option><option selected>Belum</option><option>Tidak diperlukan</option></select></div>
+    </div>
+
+    <div class="row" style="margin-top:10px">
+      <div class="col">
+        <div class="muted">Dokumen (Upload)</div>
+        <input type="file">
+        <div class="muted" style="margin-top:6px">STR/SIP, sertifikat ACLS, sertifikat EMT</div>
+      </div>
+      <div class="col">
+        <div class="muted">Catatan</div>
+        <textarea style="width:100%;min-height:90px;padding:8px;border:1px solid var(--border);border-radius:4px" placeholder="catatan…"></textarea>
+      </div>
+    </div>
+
+    <div style="margin-top:12px;display:flex;gap:8px;justify-content:flex-end">
+      <a class="btn btn-outline" href="mpp-candidates.html">Cancel</a>
+      <a class="btn btn-primary" href="mpp.html">Save</a>
+    </div>
+  </div>
+</div>
+      <div class="footer">© 2026 ClinicOps • Prototype UI (no backend)</div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

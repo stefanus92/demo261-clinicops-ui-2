@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lead Form • ClinicOps</title>
+<link rel="stylesheet" href="assets/adminlte.css">
+</head>
+<body>
+<div class="wrapper">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">C</div>
+      <div>
+        <div class="title">ClinicOps</div>
+        <div class="sub">Demo UI • fokus: Sales Lead & MPP</div>
+      </div>
+    </div>
+    <div class="nav">
+      <div class="section">Sales Lead & Pricing</div>
+<a class="" href="index.html"><span style="width:18px;display:inline-block">📊</span> Dashboard (Sales)</a>
+<a class="" href="pipeline.html"><span style="width:18px;display:inline-block">🧩</span> Pipeline</a>
+<a class="" href="leads.html"><span style="width:18px;display:inline-block">🧾</span> Leads</a>
+<a class="" href="lead-detail.html"><span style="width:18px;display:inline-block">🔎</span> Lead Detail</a>
+<a class="active" href="lead-form.html"><span style="width:18px;display:inline-block">📝</span> Lead Form</a>
+<a class="" href="pricing.html"><span style="width:18px;display:inline-block">🧮</span> Pricing & Calculator</a>
+<div class="section">MPP (Manpower)</div>
+<a class="" href="mpp.html"><span style="width:18px;display:inline-block">👥</span> MPP Dashboard</a>
+<a class="" href="mpp-demand.html"><span style="width:18px;display:inline-block">📌</span> Kebutuhan vs Siap</a>
+<a class="" href="mpp-candidates.html"><span style="width:18px;display:inline-block">📋</span> Candidates</a>
+<a class="" href="mpp-candidate-detail.html"><span style="width:18px;display:inline-block">🔎</span> Candidate Detail</a>
+<a class="" href="mpp-form.html"><span style="width:18px;display:inline-block">🧑‍⚕️</span> Candidate Form</a>
+<div class="section">Catatan</div>
+<div style="padding:0 12px 14px 12px" class="muted">Prototype UI untuk presentasi (tanpa backend). Implementasi Yii2: GridView, ActiveForm, kalkulasi corporate scoring & management fee, pipeline, serta dashboard ringkasan.</div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="navbar">
+      <div style="display:flex;flex-direction:column;gap:2px">
+        <div><b>ClinicOps Prototype</b></div>
+        <div class="muted">Demo UI • fokus: Sales Lead & MPP</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px">
+        <div class="search">
+          🔎 <input placeholder="Cari perusahaan / kandidat / lokasi…">
+        </div>
+        <div class="toolbar">
+          <a class="btn btn-outline" href="leads.html">Leads</a>
+          <a class="btn btn-outline" href="mpp.html">MPP</a>
+          <a class="btn btn-primary" href="lead-form.html">Add</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="card">
+  <div class="card-header">
+    <span>Lead Collection Form (Lengkap)</span>
+    <span class="badge badge-info">Sesuai template intake</span>
+  </div>
+  <div class="card-body">
+
+    <div class="card" style="margin-bottom:12px">
+      <div class="card-header">A. Basic Lead Information</div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <div class="muted">Date of Inquiry</div>
+            <input type="date" value="2025-12-16">
+          </div>
+          <div class="col">
+            <div class="muted">Proposal Submission Deadline</div>
+            <input type="date" value="2026-01-05">
+          </div>
+          <div class="col">
+            <div class="muted">Deployment Deadline</div>
+            <input type="date" value="2026-02-01">
+          </div>
+          <div class="col">
+            <div class="muted">Period of Contract</div>
+            <input value="12 bulan">
+          </div>
+        </div>
+
+        <div class="row" style="margin-top:10px">
+          <div class="col">
+            <div class="muted">Company Name</div>
+            <input value="PT Sinar Abadi">
+          </div>
+          <div class="col">
+            <div class="muted">Industry Sector</div>
+            <input value="Manufacturing">
+          </div>
+          <div class="col">
+            <div class="muted">Industry Category</div>
+            <select>
+              <option>Low</option><option selected>Medium</option><option>High</option>
+            </select>
+          </div>
+          <div class="col">
+            <div class="muted">Location(s) of Operation</div>
+            <input value="Bekasi, Cikarang">
+          </div>
+        </div>
+
+        <div class="row" style="margin-top:10px">
+          <div class="col">
+            <div class="muted">Number of Employees</div>
+            <input value="1200">
+          </div>
+          <div class="col">
+            <div class="muted">Site Count</div>
+            <input value="3">
+          </div>
+          <div class="col">
+            <div class="muted">MCU Type</div>
+            <select>
+              <option selected>Basic</option><option>Comprehensive</option><option>Custom</option>
+            </select>
+          </div>
+          <div class="col">
+            <div class="muted">Health Coverage</div>
+            <select>
+              <option>Private</option><option selected>BPJS</option><option>Mixed</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row" style="margin-top:10px">
+          <div class="col">
+            <div class="muted">Brand Ownership</div>
+            <select><option selected>Provider Brand</option><option>Client Brand</option></select>
+          </div>
+          <div class="col">
+            <div class="muted">Brand Perception</div>
+            <select><option>Basic</option><option selected>Standard</option><option>Premium</option></select>
+          </div>
+          <div class="col">
+            <div class="muted">Strategic Alignment</div>
+            <select><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option></select>
+          </div>
+          <div class="col">
+            <div class="muted">Clinic Category (internal)</div>
+            <select><option>Umum</option><option selected>BPJS</option><option>Elite</option></select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:12px">
+      <div class="card-header">B. Contact Information</div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <div class="muted">Contact Person</div>
+            <input value="Agus Santoso">
+          </div>
+          <div class="col">
+            <div class="muted">Contact Role</div>
+            <input value="HR Manager">
+          </div>
+          <div class="col">
+            <div class="muted">Contact Email</div>
+            <input value="agus@sinarabadi.co.id">
+          </div>
+          <div class="col">
+            <div class="muted">Contact Phone</div>
+            <input value="+62 812-xxxx-xxxx">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:12px">
+      <div class="card-header">C. Clinic Manpower Needs</div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <div class="muted">Requires On-site Clinic?</div>
+            <select><option selected>Yes</option><option>No</option></select>
+          </div>
+          <div class="col">
+            <div class="muted">Shift Requirements</div>
+            <select><option>1 Shift</option><option>2 Shift</option><option selected>24/7</option></select>
+          </div>
+          <div class="col">
+            <div class="muted">Type of Manpower</div>
+            <input value="Dokter, Perawat, Admin">
+          </div>
+          <div class="col">
+            <div class="muted">Manpower Qualification</div>
+            <input value="ACLS (dokter), EMT (opsional)">
+          </div>
+        </div>
+
+        <div class="row" style="margin-top:10px">
+          <div class="col">
+            <div class="muted">Number of Doctors</div>
+            <input value="2">
+          </div>
+          <div class="col">
+            <div class="muted">Number of Nurses</div>
+            <input value="6">
+          </div>
+          <div class="col">
+            <div class="muted">Other Manpower</div>
+            <input value="1 admin">
+          </div>
+          <div class="col">
+            <div class="muted">Number of Personnel</div>
+            <input value="9">
+          </div>
+        </div>
+
+        <div class="row" style="margin-top:10px">
+          <div class="col">
+            <div class="muted">Clinic Manpower Budget (Rp/bln)</div>
+            <input value="150000000">
+          </div>
+          <div class="col">
+            <div class="muted">Notes (manpower)</div>
+            <input value="Prefer 1 dokter senior untuk jam sibuk">
+          </div>
+          <div class="col">
+            <div class="muted">Requires On-site Clinic? (detail)</div>
+            <input value="Ruang 150m² per site">
+          </div>
+          <div class="col">
+            <div class="muted">Clinic Setup Preference</div>
+            <select><option>Basic</option><option selected>Standard</option><option>Premium</option></select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:12px">
+      <div class="card-header">D. Drugs & Consumables</div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <div class="muted">Requires Drug Supply?</div>
+            <select><option selected>Yes</option><option>No</option></select>
+          </div>
+          <div class="col">
+            <div class="muted">Estimated Monthly Drug Budget</div>
+            <input value="50000000">
+          </div>
+          <div class="col">
+            <div class="muted">MCU Budget</div>
+            <input value="25000000">
+          </div>
+          <div class="col">
+            <div class="muted">Consumables Provided By</div>
+            <select><option selected>Provider</option><option>Client</option><option>Mixed</option></select>
+          </div>
+        </div>
+        <div class="row" style="margin-top:10px">
+          <div class="col">
+            <div class="muted">Notes (drugs/consumables)</div>
+            <input value="Prefer generic + fast-moving items">
+          </div>
+          <div class="col">
+            <div class="muted">Attachment (TOR / layout / photos)</div>
+            <input type="file">
+          </div>
+          <div class="col">
+            <div class="muted">Attachment (budget doc)</div>
+            <input type="file">
+          </div>
+          <div class="col">
+            <div class="muted">Attachment (MCU spec)</div>
+            <input type="file">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:12px">
+      <div class="card-header">E. Occupational Health Services (OH)</div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <div class="muted">Required OH Services</div>
+            <input value="Hearing test, spirometry, counseling">
+          </div>
+          <div class="col">
+            <div class="muted">Frequency of Services</div>
+            <select><option>Monthly</option><option selected>Quarterly</option><option>Yearly</option></select>
+          </div>
+          <div class="col">
+            <div class="muted">Employees per Service</div>
+            <input value="300">
+          </div>
+          <div class="col">
+            <div class="muted">OH Services Budget (Rp/bln)</div>
+            <input value="40000000">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:12px">
+      <div class="card-header">F. Lead Qualification & Scoring</div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <div class="muted">Internal Champion Present?</div>
+            <select><option selected>Yes</option><option>No</option></select>
+          </div>
+          <div class="col">
+            <div class="muted">Budget Fit</div>
+            <select><option>Low</option><option selected>Medium</option><option>High</option></select>
+          </div>
+          <div class="col">
+            <div class="muted">Urgency (Deployment)</div>
+            <select><option>Low</option><option selected>Medium</option><option>High</option></select>
+          </div>
+          <div class="col">
+            <div class="muted">System Calculated Score</div>
+            <input value="82 (Qualified)" readonly>
+          </div>
+        </div>
+        <div class="muted" style="margin-top:8px">
+          Di Yii2, score dihitung otomatis dari Strategic Alignment, Champion, Budget, Employees, Sites, dll.
+        </div>
+      </div>
+    </div>
+
+    
+<div class="card" style="margin-bottom:12px">
+  <div class="card-header">F. Corporate Scoring (Penilaian Perusahaan)</div>
+  <div class="card-body">
+    <div class="muted">Penilaian ini membantu menentukan prioritas calon klien (A/B/C).</div>
+    <div class="row" style="margin-top:10px">
+      <div class="col">
+        <div class="muted">Industry Category</div>
+        <select id="lf_industry">
+          <option value="">— pilih —</option>
+          <option>Oil & Gas</option><option>Mining</option><option>Manufacture</option><option>Energy</option><option>Plantation</option><option>Banking & Insurance</option><option>Other</option>
+        </select>
+      </div>
+      <div class="col">
+        <div class="muted">Brand Ownership</div>
+        <select id="lf_ownership">
+          <option value="">— pilih —</option>
+          <option>Western Company</option><option>Asia Company</option><option>National Company</option><option>Local Company</option><option>Chinese Company</option>
+        </select>
+      </div>
+      <div class="col">
+        <div class="muted">Brand Perception</div>
+        <select id="lf_perception">
+          <option value="">— pilih —</option>
+          <option>Top of Mind</option><option>Non Top of Mind</option>
+        </select>
+      </div>
+      <div class="col">
+        <div class="muted">Site (jumlah lokasi)</div>
+        <input id="lf_sites" placeholder="contoh: 3" value="3">
+      </div>
+    </div>
+
+    <div class="row" style="margin-top:10px">
+      <div class="col">
+        <div class="muted">MCU</div>
+        <select id="lf_mcu">
+          <option value="">— pilih —</option>
+          <option>Annual + Pre MCU</option><option>Pre MCU</option><option>None</option>
+        </select>
+      </div>
+      <div class="col">
+        <div class="muted">Health Coverage</div>
+        <select id="lf_coverage">
+          <option value="">— pilih —</option>
+          <option>Insurance</option><option>Company (GL)</option><option>COB</option><option>BPJS</option>
+        </select>
+      </div>
+      <div class="col">
+        <div class="muted">Jumlah Pegawai</div>
+        <input id="lf_employees" placeholder="contoh: 1200" value="1200">
+      </div>
+      <div class="col">
+        <div class="muted">Hasil</div>
+        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+          <span class="badge">Total Score: <b id="lf_score_total">0</b></span>
+          <span class="badge badge-danger">Kategori: <b id="lf_score_cat">C</b></span>
+          <span class="muted">A tinggi • B sedang • C rendah</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+      <div class="card-header">G. Notes</div>
+      <div class="card-body">
+        <textarea style="width:100%;min-height:90px;padding:8px;border:1px solid var(--border);border-radius:4px">Kebutuhan utama: onsite clinic 24/7 untuk 3 site, integrasi BPJS, dan target go-live 6 minggu.</textarea>
+        <div style="margin-top:10px;display:flex;gap:8px;justify-content:flex-end">
+          <a class="btn btn-outline" href="leads.html">Cancel</a>
+          <a class="btn btn-primary" href="pricing.html">Save & Go to Pricing</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+      <div class="footer">© 2026 ClinicOps • Prototype UI (no backend)</div>
+    </div>
+  </main>
+</div>
+<script>
+// --- Corporate Scoring + Management Fee (demo logic) ---
+const SCORE_TABLES = {
+  industry: {
+    "Oil & Gas":5, "Mining":4, "Manufacture":3, "Energy":3, "Plantation":3, "Banking & Insurance":3, "Other":2
+  },
+  ownership: {
+    "Western Company":5, "Asia Company":4, "National Company":4, "Local Company":3, "Chinese Company":2
+  },
+  perception: { "Top of Mind":2, "Non Top of Mind":1 },
+  mcu: { "Annual + Pre MCU":5, "Pre MCU":4, "None":1 },
+  coverage: { "Insurance":5, "Company (GL)":5, "COB":3, "BPJS":1 }
+};
+
+function scoreSite(siteCount){
+  const n = parseInt(siteCount || "0", 10);
+  if(!Number.isFinite(n) || n<=0) return 0;
+  return (n>=3) ? 3 : 1;
+}
+
+function scoreEmployees(emp){
+  const n = parseInt(emp || "0", 10);
+  if(!Number.isFinite(n) || n<=0) return 0;
+  if(n>500) return 5;
+  if(n>=200) return 3;
+  return 2;
+}
+
+function corporateCategory(total){
+  if(total>25) return "A";
+  if(total>20) return "B";
+  return "C";
+}
+
+const MGMT_FEE_RULES = {
+  "A": {
+    gt50: { normal:{pct:0.08, min:4000000}, bottom:{pct:0.06, min:3000000} },
+    gt20: { normal:{pct:0.09, min:1800000}, bottom:{pct:0.07, min:1400000} },
+    le20: { normal:{pct:0.10, max:2000000}, bottom:{pct:0.08, max:1600000} }
+  },
+  "B": {
+    gt50: { normal:{pct:0.06, min:3000000}, bottom:{pct:0.04, min:2000000} },
+    gt20: { normal:{pct:0.07, min:1400000}, bottom:{pct:0.05, min:1000000} },
+    le20: { normal:{pct:0.08, max:1600000}, bottom:{pct:0.06, max:1600000} }
+  },
+  "C": {
+    gt50: { normal:{pct:0.06, min:3000000}, bottom:{pct:0.04, min:2000000} },
+    gt20: { normal:{pct:0.06, min:1200000}, bottom:{pct:0.04, min:800000} },
+    le20: { normal:{pct:0.10, max:2000000}, bottom:{pct:0.08, max:1600000} }
+  }
+};
+
+function formatIDR(n){
+  if(n===null || n===undefined || isNaN(n)) return "—";
+  return "Rp " + Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
+
+function calcCorporateScore(inputs){
+  const industry = SCORE_TABLES.industry[inputs.industry] || 0;
+  const ownership = SCORE_TABLES.ownership[inputs.ownership] || 0;
+  const perception = SCORE_TABLES.perception[inputs.perception] || 0;
+  const site = scoreSite(inputs.siteCount);
+  const mcu = SCORE_TABLES.mcu[inputs.mcu] || 0;
+  const coverage = SCORE_TABLES.coverage[inputs.coverage] || 0;
+  const employees = scoreEmployees(inputs.employees);
+  const total = industry + ownership + perception + site + mcu + coverage + employees;
+  return {industry, ownership, perception, site, mcu, coverage, employees, total, category: corporateCategory(total)};
+}
+
+function calcMgmtFee(category, monthlyCost, mode){
+  const c = (monthlyCost || 0);
+  const rules = MGMT_FEE_RULES[category] || MGMT_FEE_RULES["C"];
+  let band = "le20";
+  if(c>50000000) band="gt50";
+  else if(c>20000000) band="gt20";
+
+  const m = (mode === "Bottom") ? "bottom" : "normal";
+  const rule = rules[band][m];
+  const pct = rule.pct;
+  let fee = c * pct;
+
+  if(rule.min !== undefined) fee = Math.max(fee, rule.min);
+  if(rule.max !== undefined) fee = Math.min(fee, rule.max);
+
+  return {band, pct, fee};
+}
+
+function wireScoringUI(prefix){
+  const ids = ["industry","ownership","perception","sites","mcu","coverage","employees"];
+  ids.forEach(k=>{
+    const el = document.getElementById(`${prefix}_${k}`);
+    if(!el) return;
+    const evt = (el.tagName==="INPUT") ? "input" : "change";
+    el.addEventListener(evt, ()=>refresh());
+  });
+
+  function get(){
+    return {
+      industry: (document.getElementById(`${prefix}_industry`)||{}).value,
+      ownership: (document.getElementById(`${prefix}_ownership`)||{}).value,
+      perception: (document.getElementById(`${prefix}_perception`)||{}).value,
+      siteCount: (document.getElementById(`${prefix}_sites`)||{}).value,
+      mcu: (document.getElementById(`${prefix}_mcu`)||{}).value,
+      coverage: (document.getElementById(`${prefix}_coverage`)||{}).value,
+      employees: (document.getElementById(`${prefix}_employees`)||{}).value,
+    };
+  }
+
+  function refresh(){
+    const s = calcCorporateScore(get());
+    const totalEl = document.getElementById(`${prefix}_score_total`);
+    const catEl = document.getElementById(`${prefix}_score_cat`);
+    if(totalEl) totalEl.textContent = (s.total || 0);
+    if(catEl) {
+      catEl.textContent = s.category;
+      catEl.className = "badge " + (s.category==="A" ? "badge-success" : (s.category==="B" ? "badge-warning" : "badge-danger"));
+    }
+    return s;
+  }
+  return {refresh};
+}
+
+function wireMgmtFeeUI(prefix){
+  const costEl = document.getElementById(`${prefix}_monthly_cost`);
+  const negoEl = document.getElementById(`${prefix}_negotiation`);
+  const pctEl = document.getElementById(`${prefix}_fee_pct`);
+  const amtEl = document.getElementById(`${prefix}_fee_amount`);
+
+  function refresh(){
+    const s = (window.__scoring && window.__scoring.refresh) ? window.__scoring.refresh() : null;
+    const category = s ? s.category : "C";
+    const cost = parseFloat((costEl && costEl.value) ? costEl.value : "0");
+    const mode = (negoEl && negoEl.value) ? negoEl.value : "Normal";
+    const r = calcMgmtFee(category, cost, mode);
+
+    if(pctEl) pctEl.textContent = Math.round(r.pct*100) + "%";
+    if(amtEl) amtEl.textContent = formatIDR(r.fee);
+
+    // persist for proposal preview
+    localStorage.setItem("demo_corp_cat", category);
+    localStorage.setItem("demo_fee_pct", Math.round(r.pct*100) + "%");
+    localStorage.setItem("demo_fee_amt", formatIDR(r.fee));
+  }
+
+  if(costEl) costEl.addEventListener("input", refresh);
+  if(negoEl) negoEl.addEventListener("change", refresh);
+
+  return {refresh};
+}
+</script>
+<script>
+window.__scoring = wireScoringUI("lf");
+window.__scoring.refresh();
+</script>
+</body>
+</html>

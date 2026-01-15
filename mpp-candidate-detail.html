@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Candidate Detail • MPP • ClinicOps</title>
+<link rel="stylesheet" href="assets/adminlte.css">
+</head>
+<body>
+<div class="wrapper">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">C</div>
+      <div>
+        <div class="title">ClinicOps</div>
+        <div class="sub">Demo UI • fokus: Sales Lead & MPP</div>
+      </div>
+    </div>
+    <div class="nav">
+      <div class="section">Sales Lead & Pricing</div>
+<a class="" href="index.html"><span style="width:18px;display:inline-block">📊</span> Dashboard (Sales)</a>
+<a class="" href="pipeline.html"><span style="width:18px;display:inline-block">🧩</span> Pipeline</a>
+<a class="" href="leads.html"><span style="width:18px;display:inline-block">🧾</span> Leads</a>
+<a class="" href="lead-detail.html"><span style="width:18px;display:inline-block">🔎</span> Lead Detail</a>
+<a class="" href="lead-form.html"><span style="width:18px;display:inline-block">📝</span> Lead Form</a>
+<a class="" href="pricing.html"><span style="width:18px;display:inline-block">🧮</span> Pricing & Calculator</a>
+<div class="section">MPP (Manpower)</div>
+<a class="" href="mpp.html"><span style="width:18px;display:inline-block">👥</span> MPP Dashboard</a>
+<a class="" href="mpp-demand.html"><span style="width:18px;display:inline-block">📌</span> Kebutuhan vs Siap</a>
+<a class="" href="mpp-candidates.html"><span style="width:18px;display:inline-block">📋</span> Candidates</a>
+<a class="active" href="mpp-candidate-detail.html"><span style="width:18px;display:inline-block">🔎</span> Candidate Detail</a>
+<a class="" href="mpp-form.html"><span style="width:18px;display:inline-block">🧑‍⚕️</span> Candidate Form</a>
+<div class="section">Catatan</div>
+<div style="padding:0 12px 14px 12px" class="muted">Prototype UI untuk presentasi (tanpa backend). Implementasi Yii2: GridView, ActiveForm, kalkulasi corporate scoring & management fee, pipeline, serta dashboard ringkasan.</div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="navbar">
+      <div style="display:flex;flex-direction:column;gap:2px">
+        <div><b>ClinicOps Prototype</b></div>
+        <div class="muted">Demo UI • fokus: Sales Lead & MPP</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px">
+        <div class="search">
+          🔎 <input placeholder="Cari perusahaan / kandidat / lokasi…">
+        </div>
+        <div class="toolbar">
+          <a class="btn btn-outline" href="leads.html">Leads</a>
+          <a class="btn btn-outline" href="mpp.html">MPP</a>
+          <a class="btn btn-primary" href="mpp-form.html">Add</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <div class="card-header">
+        <span>Candidate Detail</span>
+        <span class="badge badge-warning">Contoh: Dr. Andrian (CND-0012)</span>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <div class="muted">Nama</div>
+            <div><b>Dr. Andrian</b></div>
+            <div class="muted">Role: Dokter</div>
+          </div>
+          <div class="col">
+            <div class="muted">Status Proses</div>
+            <div><span class="badge badge-warning">Interview</span></div>
+            <div class="muted">Jadwal: 2026-01-10</div>
+          </div>
+          <div class="col">
+            <div class="muted">Lokasi Preferensi</div>
+            <div><b>Jakarta</b></div>
+            <div class="muted">Target: klinik 24/7</div>
+          </div>
+          <div class="col">
+            <div class="muted">Kesiapan</div>
+            <div><span class="badge badge-success">Hampir siap</span></div>
+            <div class="muted">Tinggal final interview</div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <div class="card-header">Sertifikasi & Dokumen</div>
+          <div class="card-body">
+            <table class="table">
+              <thead><tr><th>Item</th><th>Status</th><th>Expired</th><th>Catatan</th></tr></thead>
+              <tbody>
+                <tr><td>ACLS</td><td><span class="badge badge-success">Sudah</span></td><td>2026-07-01</td><td>OK</td></tr>
+                <tr><td>EMT</td><td><span class="badge badge-success">Lulus</span></td><td>—</td><td>OK</td></tr>
+                <tr><td>STR/SIP</td><td><span class="badge badge-warning">Pending</span></td><td>—</td><td>Menunggu upload</td></tr>
+              </tbody>
+            </table>
+            <div style="text-align:right;margin-top:8px">
+              <a class="btn btn-outline" href="mpp-form.html">Edit Kandidat</a>
+              <a class="btn btn-primary" href="mpp-demand.html">Lihat Kebutuhan Lokasi</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <div class="card-header">Riwayat Proses</div>
+          <div class="card-body">
+            <div class="card" style="margin-bottom:8px"><div class="card-body">
+              <b>2025-12-20</b> • Applied • <span class="muted">CV masuk via referral</span>
+            </div></div>
+            <div class="card" style="margin-bottom:8px"><div class="card-body">
+              <b>2025-12-26</b> • Screening • <span class="muted">verifikasi dokumen dasar</span>
+            </div></div>
+            <div class="card" style="margin-bottom:8px"><div class="card-body">
+              <b>2026-01-02</b> • Interview dijadwalkan • <span class="muted">menunggu sesi user</span>
+            </div></div>
+            <div class="row" style="margin-top:10px">
+              <div class="col">
+                <div class="muted">Tambah catatan (dummy)</div>
+                <input placeholder="contoh: minta referensi tambahan">
+              </div>
+              <div class="col" style="display:flex;align-items:flex-end;justify-content:flex-end">
+                <a class="btn btn-primary" href="#">Simpan</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div class="footer">© 2026 ClinicOps • Prototype UI (no backend)</div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

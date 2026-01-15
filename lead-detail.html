@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lead Detail • ClinicOps</title>
+<link rel="stylesheet" href="assets/adminlte.css">
+</head>
+<body>
+<div class="wrapper">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">C</div>
+      <div>
+        <div class="title">ClinicOps</div>
+        <div class="sub">Demo UI • fokus: Sales Lead & MPP</div>
+      </div>
+    </div>
+    <div class="nav">
+      <div class="section">Sales Lead & Pricing</div>
+<a class="" href="index.html"><span style="width:18px;display:inline-block">📊</span> Dashboard (Sales)</a>
+<a class="" href="pipeline.html"><span style="width:18px;display:inline-block">🧩</span> Pipeline</a>
+<a class="" href="leads.html"><span style="width:18px;display:inline-block">🧾</span> Leads</a>
+<a class="active" href="lead-detail.html"><span style="width:18px;display:inline-block">🔎</span> Lead Detail</a>
+<a class="" href="lead-form.html"><span style="width:18px;display:inline-block">📝</span> Lead Form</a>
+<a class="" href="pricing.html"><span style="width:18px;display:inline-block">🧮</span> Pricing & Calculator</a>
+<div class="section">MPP (Manpower)</div>
+<a class="" href="mpp.html"><span style="width:18px;display:inline-block">👥</span> MPP Dashboard</a>
+<a class="" href="mpp-demand.html"><span style="width:18px;display:inline-block">📌</span> Kebutuhan vs Siap</a>
+<a class="" href="mpp-candidates.html"><span style="width:18px;display:inline-block">📋</span> Candidates</a>
+<a class="" href="mpp-candidate-detail.html"><span style="width:18px;display:inline-block">🔎</span> Candidate Detail</a>
+<a class="" href="mpp-form.html"><span style="width:18px;display:inline-block">🧑‍⚕️</span> Candidate Form</a>
+<div class="section">Catatan</div>
+<div style="padding:0 12px 14px 12px" class="muted">Prototype UI untuk presentasi (tanpa backend). Implementasi Yii2: GridView, ActiveForm, kalkulasi corporate scoring & management fee, pipeline, serta dashboard ringkasan.</div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="navbar">
+      <div style="display:flex;flex-direction:column;gap:2px">
+        <div><b>ClinicOps Prototype</b></div>
+        <div class="muted">Demo UI • fokus: Sales Lead & MPP</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px">
+        <div class="search">
+          🔎 <input placeholder="Cari perusahaan / kandidat / lokasi…">
+        </div>
+        <div class="toolbar">
+          <a class="btn btn-outline" href="leads.html">Leads</a>
+          <a class="btn btn-outline" href="mpp.html">MPP</a>
+          <a class="btn btn-primary" href="lead-form.html">Add</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <div class="card-header">
+        <span>Lead Detail</span>
+        <span class="badge badge-warning">Contoh: PT Sinar Abadi</span>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <div class="muted">Perusahaan</div>
+            <div><b>PT Sinar Abadi</b></div>
+            <div class="muted">Bekasi • 3 site • BPJS</div>
+          </div>
+          <div class="col">
+            <div class="muted">Status Proses</div>
+            <div><span class="badge badge-warning">Harga Dikirim</span></div>
+            <div class="muted">Proposal deadline: 2026-01-05</div>
+          </div>
+          <div class="col">
+            <div class="muted">Prioritas</div>
+            <div><span class="badge badge-success">Kategori A</span></div>
+            <div class="muted">Corporate Score: 27</div>
+          </div>
+          <div class="col">
+            <div class="muted">PIC</div>
+            <div><b>Rina</b></div>
+            <div class="muted">Sales</div>
+          </div>
+        </div>
+
+        <div style="margin-top:12px" class="card">
+          <div class="card-header">Ringkasan Biaya (Read-only)</div>
+          <div class="card-body">
+            <table class="table">
+              <thead><tr><th>Item</th><th>Nilai</th><th>Catatan</th></tr></thead>
+              <tbody>
+                <tr><td>Biaya Awal (Setup)</td><td>Rp 365 jt</td><td>Renovasi minor + setup alat</td></tr>
+                <tr><td>Biaya Bulanan</td><td>Rp 240 jt</td><td>SDM + operasional + obat</td></tr>
+                <tr><td>Management Fee</td><td>7% • Rp 1,4 jt</td><td>Mode: Normal</td></tr>
+                <tr><td><b>Total Estimasi Kontrak</b></td><td><b>Rp 3,245 M</b></td><td>12 bulan</td></tr>
+              </tbody>
+            </table>
+            <div style="text-align:right;margin-top:8px">
+              <a class="btn btn-outline" href="pricing.html">Ubah via Kalkulator</a>
+              <a class="btn btn-primary" href="lead-form.html">Edit Data Lead</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <div class="card-header">Catatan & Riwayat Aktivitas</div>
+          <div class="card-body">
+            <div class="card" style="margin-bottom:8px"><div class="card-body">
+              <b>2026-01-02</b> • Kontak awal dengan HR • <span class="muted">minta data jumlah pegawai & coverage</span>
+            </div></div>
+            <div class="card" style="margin-bottom:8px"><div class="card-body">
+              <b>2026-01-03</b> • Survey lokasi site #1 • <span class="muted">foto ruangan klinik diterima</span>
+            </div></div>
+            <div class="card" style="margin-bottom:8px"><div class="card-body">
+              <b>2026-01-04</b> • Harga dikirim (Draft) • <span class="muted">tunggu respon manajemen</span>
+            </div></div>
+            <div class="row" style="margin-top:10px">
+              <div class="col">
+                <div class="muted">Tambah catatan (dummy)</div>
+                <input placeholder="contoh: follow-up hari Jumat">
+              </div>
+              <div class="col" style="display:flex;align-items:flex-end;justify-content:flex-end">
+                <a class="btn btn-primary" href="#">Simpan</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div class="footer">© 2026 ClinicOps • Prototype UI (no backend)</div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

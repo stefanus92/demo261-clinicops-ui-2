@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pricing & Calculator • ClinicOps</title>
+<link rel="stylesheet" href="assets/adminlte.css">
+</head>
+<body>
+<div class="wrapper">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">C</div>
+      <div>
+        <div class="title">ClinicOps</div>
+        <div class="sub">Demo UI • fokus: Sales Lead & MPP</div>
+      </div>
+    </div>
+    <div class="nav">
+      <div class="section">Sales Lead & Pricing</div>
+<a class="" href="index.html"><span style="width:18px;display:inline-block">📊</span> Dashboard (Sales)</a>
+<a class="" href="pipeline.html"><span style="width:18px;display:inline-block">🧩</span> Pipeline</a>
+<a class="" href="leads.html"><span style="width:18px;display:inline-block">🧾</span> Leads</a>
+<a class="" href="lead-detail.html"><span style="width:18px;display:inline-block">🔎</span> Lead Detail</a>
+<a class="" href="lead-form.html"><span style="width:18px;display:inline-block">📝</span> Lead Form</a>
+<a class="active" href="pricing.html"><span style="width:18px;display:inline-block">🧮</span> Pricing & Calculator</a>
+<div class="section">MPP (Manpower)</div>
+<a class="" href="mpp.html"><span style="width:18px;display:inline-block">👥</span> MPP Dashboard</a>
+<a class="" href="mpp-demand.html"><span style="width:18px;display:inline-block">📌</span> Kebutuhan vs Siap</a>
+<a class="" href="mpp-candidates.html"><span style="width:18px;display:inline-block">📋</span> Candidates</a>
+<a class="" href="mpp-candidate-detail.html"><span style="width:18px;display:inline-block">🔎</span> Candidate Detail</a>
+<a class="" href="mpp-form.html"><span style="width:18px;display:inline-block">🧑‍⚕️</span> Candidate Form</a>
+<div class="section">Catatan</div>
+<div style="padding:0 12px 14px 12px" class="muted">Prototype UI untuk presentasi (tanpa backend). Implementasi Yii2: GridView, ActiveForm, kalkulasi corporate scoring & management fee, pipeline, serta dashboard ringkasan.</div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="navbar">
+      <div style="display:flex;flex-direction:column;gap:2px">
+        <div><b>ClinicOps Prototype</b></div>
+        <div class="muted">Demo UI • fokus: Sales Lead & MPP</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px">
+        <div class="search">
+          🔎 <input placeholder="Cari perusahaan / kandidat / lokasi…">
+        </div>
+        <div class="toolbar">
+          <a class="btn btn-outline" href="leads.html">Leads</a>
+          <a class="btn btn-outline" href="mpp.html">MPP</a>
+          <a class="btn btn-primary" href="lead-form.html">Add</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+  <div class="col">
+    <div class="card">
+      <div class="card-header">
+        <span>Corporate Scoring Calculator</span>
+        <span class="badge badge-info">Auto hitung kategori A/B/C</span>
+      </div>
+      <div class="card-body">
+        <table class="table">
+          <thead><tr><th>Corporate Metrics</th><th>Category</th><th>Scoring</th></tr></thead>
+          <tbody>
+            <tr><td>Industry Category</td><td><select id="pr_industry">
+              <option value="">— pilih —</option>
+              <option>Oil & Gas</option><option>Mining</option><option>Manufacture</option><option>Energy</option><option>Plantation</option><option>Banking & Insurance</option><option>Other</option>
+            </select></td><td id="pr_row_industry" class="muted">—</td></tr>
+
+            <tr><td>Brand Ownership</td><td><select id="pr_ownership">
+              <option value="">— pilih —</option>
+              <option>Western Company</option><option>Asia Company</option><option>National Company</option><option>Local Company</option><option>Chinese Company</option>
+            </select></td><td id="pr_row_ownership" class="muted">—</td></tr>
+
+            <tr><td>Brand Perception</td><td><select id="pr_perception">
+              <option value="">— pilih —</option>
+              <option>Top of Mind</option><option>Non Top of Mind</option>
+            </select></td><td id="pr_row_perception" class="muted">—</td></tr>
+
+            <tr><td>Site</td><td><input id="pr_sites" value="3" placeholder="contoh: 3"></td><td id="pr_row_site" class="muted">—</td></tr>
+
+            <tr><td>MCU</td><td><select id="pr_mcu">
+              <option value="">— pilih —</option>
+              <option>Annual + Pre MCU</option><option>Pre MCU</option><option>None</option>
+            </select></td><td id="pr_row_mcu" class="muted">—</td></tr>
+
+            <tr><td>Health Coverage</td><td><select id="pr_coverage">
+              <option value="">— pilih —</option>
+              <option>Insurance</option><option>Company (GL)</option><option>COB</option><option>BPJS</option>
+            </select></td><td id="pr_row_coverage" class="muted">—</td></tr>
+
+            <tr><td>Jumlah Pegawai</td><td><input id="pr_employees" value="1200" placeholder="contoh: 1200"></td><td id="pr_row_employees" class="muted">—</td></tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th colspan="2">Total</th>
+              <th>
+                <span class="badge">Score: <b id="pr_score_total">0</b></span>
+                <span class="badge badge-danger" style="margin-left:6px">Kategori: <b id="pr_score_cat">C</b></span>
+              </th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card">
+      <div class="card-header">
+        <span>Management Fee Calculator</span>
+        <span class="badge badge-success">Normal / Bottom</span>
+      </div>
+      <div class="card-body">
+        <table class="table">
+          <tbody>
+            <tr><td><b>Est Monthly Cost</b></td><td><input id="mf_monthly_cost" value="240000000" placeholder="contoh: 50000000"></td></tr>
+            <tr><td><b>Negotiation</b></td><td>
+              <select id="mf_negotiation">
+                <option selected>Normal</option>
+                <option>Bottom</option>
+              </select>
+            </td></tr>
+            <tr><td><b>% Management Fee</b></td><td><span class="badge badge-info" id="mf_fee_pct">—</span></td></tr>
+            <tr><td><b>Monthly Management Fee</b></td><td><span class="badge badge-success" id="mf_fee_amount">—</span></td></tr>
+          </tbody>
+        </table>
+        <div class="muted" style="margin-top:8px">
+          Angka dihitung otomatis sesuai aturan kategori perusahaan & total biaya bulanan, termasuk batas minimal/maksimal.
+        </div>
+        <div style="margin-top:10px;display:flex;gap:8px;justify-content:flex-end">
+          <a class="btn btn-outline" href="lead-form.html">Back to Lead</a>
+          <a class="btn btn-primary" href="proposal.html">Preview Proposal</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <span>Pricing & Project Calculator (Realistic)</span>
+    <span class="badge badge-success">Template-based pricing</span>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col">
+        <div class="card" style="margin-bottom:0">
+          <div class="card-header">1) Input</div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col">
+                <div class="muted">Lead</div>
+                <select>
+                  <option selected>PT Sinar Abadi • Bekasi</option>
+                  <option>Office Tower X • Jakarta</option>
+                  <option>SMA Harapan • Surabaya</option>
+                </select>
+              </div>
+              <div class="col">
+                <div class="muted">Clinic Category</div>
+                <select>
+                  <option>Umum</option>
+                  <option selected>BPJS</option>
+                  <option>Elite</option>
+                </select>
+              </div>
+              <div class="col">
+                <div class="muted">Pricing Template</div>
+                <select>
+                  <option>Basic - School/Office</option>
+                  <option selected>BPJS Standard</option>
+                  <option>Elite Premium</option>
+                </select>
+              </div>
+              <div class="col">
+                <div class="muted">Contract (months)</div>
+                <input value="12">
+              </div>
+            </div>
+
+            <div class="row" style="margin-top:10px">
+              <div class="col">
+                <div class="muted">Site Count</div>
+                <input value="3">
+              </div>
+              <div class="col">
+                <div class="muted">Area per Site (m²)</div>
+                <input value="150">
+              </div>
+              <div class="col">
+                <div class="muted">Shift</div>
+                <select><option>1 Shift</option><option>2 Shift</option><option selected>24/7</option></select>
+              </div>
+              <div class="col">
+                <div class="muted">Probability (Stage)</div>
+                <select><option>10%</option><option>30%</option><option selected>60%</option><option>90%</option></select>
+              </div>
+            </div>
+
+            <div class="card" style="margin-top:12px">
+              <div class="card-header">Facilities (Checklist)</div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col"><label><input type="checkbox" checked> Ruang Pemeriksaan</label></div>
+                  <div class="col"><label><input type="checkbox" checked> Ruang Tindakan</label></div>
+                  <div class="col"><label><input type="checkbox" checked> Farmasi</label></div>
+                  <div class="col"><label><input type="checkbox" checked> Lab Ringan</label></div>
+                </div>
+                <div class="row" style="margin-top:6px">
+                  <div class="col"><label><input type="checkbox" checked> Sistem Antrian</label></div>
+                  <div class="col"><label><input type="checkbox" checked> Integrasi BPJS</label></div>
+                  <div class="col"><label><input type="checkbox"> Lounge Premium</label></div>
+                  <div class="col"><label><input type="checkbox"> Branding Premium</label></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card" style="margin-top:12px">
+              <div class="card-header">Manpower & Operating</div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col"><div class="muted">Doctors</div><input value="2"></div>
+                  <div class="col"><div class="muted">Nurses</div><input value="6"></div>
+                  <div class="col"><div class="muted">Other (Admin/EMT)</div><input value="1"></div>
+                  <div class="col"><div class="muted">Manpower Budget (Rp/bln)</div><input value="150000000"></div>
+                </div>
+                <div class="row" style="margin-top:10px">
+                  <div class="col"><div class="muted">Drug Supply?</div><select><option selected>Yes</option><option>No</option></select></div>
+                  <div class="col"><div class="muted">Drug Budget (Rp/bln)</div><input value="50000000"></div>
+                  <div class="col"><div class="muted">OH Budget (Rp/bln)</div><input value="40000000"></div>
+                  <div class="col"><div class="muted">MCU Budget (Rp)</div><input value="25000000"></div>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top:12px;display:flex;gap:8px;justify-content:flex-end">
+              <a class="btn btn-outline" href="lead-form.html">Back to Lead</a>
+              <button class="btn btn-success">Calculate</button>
+              <a class="btn btn-primary" href="proposal.html">Generate Proposal</a>
+            </div>
+            <div class="muted" style="margin-top:8px">
+              Di Yii2: kalkulasi akan menggunakan template (biaya/m², paket alat, margin, tax) dan tersimpan sebagai versioning (pricing history).
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card" style="margin-bottom:0">
+          <div class="card-header">2) Output (Breakdown)</div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col">
+                <div class="small-box bg-info" style="padding:12px">
+                  <h3 style="font-size:20px">Rp 365 jt</h3>
+                  <p>Setup Cost (sekali)</p>
+                  <div class="meta">Renovasi + furniture + alat + IT</div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="small-box bg-success" style="padding:12px">
+                  <h3 style="font-size:20px">Rp 240 jt</h3>
+                  <p>Recurring / bulan</p>
+                  <div class="meta">SDM + Obat + OH</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card" style="margin-top:12px">
+              <div class="card-header">Setup Breakdown (per site)</div>
+              <div class="card-body">
+                <table class="table">
+                  <thead><tr><th>Komponen</th><th>Formula</th><th>Nilai</th></tr></thead>
+                  <tbody>
+                    <tr><td>Renovasi</td><td>150m² × Rp 1.200.000</td><td>Rp 180 jt</td></tr>
+                    <tr><td>Furniture</td><td>Paket BPJS Standard</td><td>Rp 40 jt</td></tr>
+                    <tr><td>Alat Medis</td><td>Paket BPJS</td><td>Rp 120 jt</td></tr>
+                    <tr><td>IT & Software</td><td>Antrian + Integrasi BPJS</td><td>Rp 15 jt</td></tr>
+                    <tr><td>Perizinan & Admin</td><td>Fixed</td><td>Rp 10 jt</td></tr>
+                  </tbody>
+                </table>
+                <div class="muted" style="margin-top:8px">Angka di atas contoh. Di Yii2 dihitung dari template + item options.</div>
+              </div>
+            </div>
+
+            <div class="card" style="margin-top:12px">
+              <div class="card-header">Recurring Breakdown (per bulan)</div>
+              <div class="card-body">
+                <table class="table">
+                  <thead><tr><th>Komponen</th><th>Nilai</th><th>Notes</th></tr></thead>
+                  <tbody>
+                    <tr><td>Manpower</td><td>Rp 150 jt</td><td>2 dokter, 6 perawat, 1 admin</td></tr>
+                    <tr><td>Drug Supply</td><td>Rp 50 jt</td><td>Fast-moving + generic</td></tr>
+                    <tr><td>OH Services</td><td>Rp 40 jt</td><td>Quarterly program</td></tr>
+                    <tr><td>Other Ops</td><td>Rp 0</td><td>Optional (ambulance, call center)</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="card" style="margin-top:12px">
+              <div class="card-header">Total Contract</div>
+              <div class="card-body">
+                <table class="table">
+                  <thead><tr><th>Item</th><th>Nilai</th></tr></thead>
+                  <tbody>
+                    <tr><td>Setup (sekali)</td><td>Rp 365 jt</td></tr>
+                    <tr><td>Recurring (12 bulan)</td><td>Rp 240 jt × 12 = Rp 2.880 M</td></tr>
+                    <tr><td><b>Total</b></td><td><b>Rp 3.245 M</b></td></tr>
+                    <tr><td>Probability-weighted forecast (60%)</td><td>Rp 1.947 M</td></tr>
+                  </tbody>
+                </table>
+                <div style="margin-top:10px;display:flex;gap:8px;justify-content:flex-end">
+                  <a class="btn btn-outline" href="leads.html">Back to Leads</a>
+                  <a class="btn btn-primary" href="proposal.html">Preview Proposal</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+      <div class="footer">© 2026 ClinicOps • Prototype UI (no backend)</div>
+    </div>
+  </main>
+</div>
+<script>
+// --- Corporate Scoring + Management Fee (demo logic) ---
+const SCORE_TABLES = {
+  industry: {
+    "Oil & Gas":5, "Mining":4, "Manufacture":3, "Energy":3, "Plantation":3, "Banking & Insurance":3, "Other":2
+  },
+  ownership: {
+    "Western Company":5, "Asia Company":4, "National Company":4, "Local Company":3, "Chinese Company":2
+  },
+  perception: { "Top of Mind":2, "Non Top of Mind":1 },
+  mcu: { "Annual + Pre MCU":5, "Pre MCU":4, "None":1 },
+  coverage: { "Insurance":5, "Company (GL)":5, "COB":3, "BPJS":1 }
+};
+
+function scoreSite(siteCount){
+  const n = parseInt(siteCount || "0", 10);
+  if(!Number.isFinite(n) || n<=0) return 0;
+  return (n>=3) ? 3 : 1;
+}
+
+function scoreEmployees(emp){
+  const n = parseInt(emp || "0", 10);
+  if(!Number.isFinite(n) || n<=0) return 0;
+  if(n>500) return 5;
+  if(n>=200) return 3;
+  return 2;
+}
+
+function corporateCategory(total){
+  if(total>25) return "A";
+  if(total>20) return "B";
+  return "C";
+}
+
+const MGMT_FEE_RULES = {
+  "A": {
+    gt50: { normal:{pct:0.08, min:4000000}, bottom:{pct:0.06, min:3000000} },
+    gt20: { normal:{pct:0.09, min:1800000}, bottom:{pct:0.07, min:1400000} },
+    le20: { normal:{pct:0.10, max:2000000}, bottom:{pct:0.08, max:1600000} }
+  },
+  "B": {
+    gt50: { normal:{pct:0.06, min:3000000}, bottom:{pct:0.04, min:2000000} },
+    gt20: { normal:{pct:0.07, min:1400000}, bottom:{pct:0.05, min:1000000} },
+    le20: { normal:{pct:0.08, max:1600000}, bottom:{pct:0.06, max:1600000} }
+  },
+  "C": {
+    gt50: { normal:{pct:0.06, min:3000000}, bottom:{pct:0.04, min:2000000} },
+    gt20: { normal:{pct:0.06, min:1200000}, bottom:{pct:0.04, min:800000} },
+    le20: { normal:{pct:0.10, max:2000000}, bottom:{pct:0.08, max:1600000} }
+  }
+};
+
+function formatIDR(n){
+  if(n===null || n===undefined || isNaN(n)) return "—";
+  return "Rp " + Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
+
+function calcCorporateScore(inputs){
+  const industry = SCORE_TABLES.industry[inputs.industry] || 0;
+  const ownership = SCORE_TABLES.ownership[inputs.ownership] || 0;
+  const perception = SCORE_TABLES.perception[inputs.perception] || 0;
+  const site = scoreSite(inputs.siteCount);
+  const mcu = SCORE_TABLES.mcu[inputs.mcu] || 0;
+  const coverage = SCORE_TABLES.coverage[inputs.coverage] || 0;
+  const employees = scoreEmployees(inputs.employees);
+  const total = industry + ownership + perception + site + mcu + coverage + employees;
+  return {industry, ownership, perception, site, mcu, coverage, employees, total, category: corporateCategory(total)};
+}
+
+function calcMgmtFee(category, monthlyCost, mode){
+  const c = (monthlyCost || 0);
+  const rules = MGMT_FEE_RULES[category] || MGMT_FEE_RULES["C"];
+  let band = "le20";
+  if(c>50000000) band="gt50";
+  else if(c>20000000) band="gt20";
+
+  const m = (mode === "Bottom") ? "bottom" : "normal";
+  const rule = rules[band][m];
+  const pct = rule.pct;
+  let fee = c * pct;
+
+  if(rule.min !== undefined) fee = Math.max(fee, rule.min);
+  if(rule.max !== undefined) fee = Math.min(fee, rule.max);
+
+  return {band, pct, fee};
+}
+
+function wireScoringUI(prefix){
+  const ids = ["industry","ownership","perception","sites","mcu","coverage","employees"];
+  ids.forEach(k=>{
+    const el = document.getElementById(`${prefix}_${k}`);
+    if(!el) return;
+    const evt = (el.tagName==="INPUT") ? "input" : "change";
+    el.addEventListener(evt, ()=>refresh());
+  });
+
+  function get(){
+    return {
+      industry: (document.getElementById(`${prefix}_industry`)||{}).value,
+      ownership: (document.getElementById(`${prefix}_ownership`)||{}).value,
+      perception: (document.getElementById(`${prefix}_perception`)||{}).value,
+      siteCount: (document.getElementById(`${prefix}_sites`)||{}).value,
+      mcu: (document.getElementById(`${prefix}_mcu`)||{}).value,
+      coverage: (document.getElementById(`${prefix}_coverage`)||{}).value,
+      employees: (document.getElementById(`${prefix}_employees`)||{}).value,
+    };
+  }
+
+  function refresh(){
+    const s = calcCorporateScore(get());
+    const totalEl = document.getElementById(`${prefix}_score_total`);
+    const catEl = document.getElementById(`${prefix}_score_cat`);
+    if(totalEl) totalEl.textContent = (s.total || 0);
+    if(catEl) {
+      catEl.textContent = s.category;
+      catEl.className = "badge " + (s.category==="A" ? "badge-success" : (s.category==="B" ? "badge-warning" : "badge-danger"));
+    }
+    return s;
+  }
+  return {refresh};
+}
+
+function wireMgmtFeeUI(prefix){
+  const costEl = document.getElementById(`${prefix}_monthly_cost`);
+  const negoEl = document.getElementById(`${prefix}_negotiation`);
+  const pctEl = document.getElementById(`${prefix}_fee_pct`);
+  const amtEl = document.getElementById(`${prefix}_fee_amount`);
+
+  function refresh(){
+    const s = (window.__scoring && window.__scoring.refresh) ? window.__scoring.refresh() : null;
+    const category = s ? s.category : "C";
+    const cost = parseFloat((costEl && costEl.value) ? costEl.value : "0");
+    const mode = (negoEl && negoEl.value) ? negoEl.value : "Normal";
+    const r = calcMgmtFee(category, cost, mode);
+
+    if(pctEl) pctEl.textContent = Math.round(r.pct*100) + "%";
+    if(amtEl) amtEl.textContent = formatIDR(r.fee);
+
+    // persist for proposal preview
+    localStorage.setItem("demo_corp_cat", category);
+    localStorage.setItem("demo_fee_pct", Math.round(r.pct*100) + "%");
+    localStorage.setItem("demo_fee_amt", formatIDR(r.fee));
+  }
+
+  if(costEl) costEl.addEventListener("input", refresh);
+  if(negoEl) negoEl.addEventListener("change", refresh);
+
+  return {refresh};
+}
+</script>
+<script>
+window.__scoring = wireScoringUI("pr");
+window.__mgmt = wireMgmtFeeUI("mf");
+
+function refreshDetails(){
+  const s = window.__scoring.refresh();
+  document.getElementById("pr_row_industry").textContent = (s.industry||0);
+  document.getElementById("pr_row_ownership").textContent = (s.ownership||0);
+  document.getElementById("pr_row_perception").textContent = (s.perception||0);
+  document.getElementById("pr_row_site").textContent = (s.site||0);
+  document.getElementById("pr_row_mcu").textContent = (s.mcu||0);
+  document.getElementById("pr_row_coverage").textContent = (s.coverage||0);
+  document.getElementById("pr_row_employees").textContent = (s.employees||0);
+  window.__mgmt.refresh();
+}
+
+["pr_industry","pr_ownership","pr_perception","pr_sites","pr_mcu","pr_coverage","pr_employees"].forEach(id=>{
+  const el = document.getElementById(id);
+  if(!el) return;
+  el.addEventListener(el.tagName==="INPUT" ? "input" : "change", refreshDetails);
+});
+
+refreshDetails();
+</script>
+</body>
+</html>

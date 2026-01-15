@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Settings • ClinicOps</title>
+<link rel="stylesheet" href="assets/adminlte.css">
+</head>
+<body>
+<div class="wrapper">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">C</div>
+      <div>
+        <div class="title">ClinicOps</div>
+        <div class="sub">AdminLTE-style UI Mockup</div>
+      </div>
+    </div>
+    <div class="nav">
+      <div class="section">Phase 1</div>
+<a class="" href="index.html"><span style="width:18px;display:inline-block">📊</span> Dashboard</a>
+<a class="" href="leads.html"><span style="width:18px;display:inline-block">🧾</span> Leads</a>
+<a class="" href="lead-form.html"><span style="width:18px;display:inline-block">📝</span> Lead Form</a>
+<a class="" href="pricing.html"><span style="width:18px;display:inline-block">🧮</span> Pricing Calculator</a>
+<a class="" href="proposal.html"><span style="width:18px;display:inline-block">📄</span> Proposal Preview</a>
+<a class="active" href="settings.html"><span style="width:18px;display:inline-block">⚙️</span> Settings (Templates)</a>
+      <div class="section">Catatan</div>
+      <div style="padding:0 12px 14px 12px" class="muted">
+        Prototype UI untuk presentasi (tanpa backend). Implementasi Yii2:
+        <ul style="margin:8px 0 0 18px; padding:0">
+          <li>Leads list → GridView + filters</li>
+          <li>Lead form → ActiveForm + validation + upload</li>
+          <li>Pricing → template biaya + kalkulasi + audit log</li>
+          <li>Proposal → HTML preview + export PDF (mPDF)</li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="navbar">
+      <div style="display:flex;flex-direction:column;gap:2px">
+        <div><b>Phase 1:</b> Sales Lead • Pricing • Project Calculator</div>
+        <div class="muted">Demo UI • validasi alur & kebutuhan sebelum coding.</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px">
+        <div class="search">
+          🔎 <input placeholder="Cari perusahaan / lokasi / PIC…">
+        </div>
+        <div class="toolbar">
+          <button class="btn btn-outline">Export</button>
+          <button class="btn btn-primary">Add Lead</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      
+<div class="card">
+  <div class="card-header">
+    <span>Settings • Pricing Templates</span>
+    <span class="badge">Admin</span>
+  </div>
+  <div class="card-body">
+    <div class="muted">Di Yii2: CRUD template biaya per kategori klinik + item packages + margin + tax. (Untuk demo UI, tabel contoh.)</div>
+    <div style="margin-top:12px">
+      <table class="table">
+        <thead><tr><th>Template</th><th>Kategori</th><th>Renovasi/m²</th><th>Package Alat</th><th>Margin</th><th>Tax</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>Basic - School/Office</td><td>Umum</td><td>Rp 850.000</td><td>Basic Set</td><td>18%</td><td>11%</td><td><span class="badge badge-success">Active</span></td></tr>
+          <tr><td>BPJS Standard</td><td>BPJS</td><td>Rp 1.200.000</td><td>BPJS Set</td><td>20%</td><td>11%</td><td><span class="badge badge-success">Active</span></td></tr>
+          <tr><td>Elite Premium</td><td>Elite</td><td>Rp 2.400.000</td><td>Premium Set</td><td>25%</td><td>11%</td><td><span class="badge badge-success">Active</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+      <div class="footer">© 2026 ClinicOps • Prototype UI (no backend)</div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Leads • ClinicOps</title>
+<link rel="stylesheet" href="assets/adminlte.css">
+</head>
+<body>
+<div class="wrapper">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">C</div>
+      <div>
+        <div class="title">ClinicOps</div>
+        <div class="sub">Demo UI • fokus: Sales Lead & MPP</div>
+      </div>
+    </div>
+    <div class="nav">
+      <div class="section">Sales Lead & Pricing</div>
+<a class="" href="index.html"><span style="width:18px;display:inline-block">📊</span> Dashboard (Sales)</a>
+<a class="" href="pipeline.html"><span style="width:18px;display:inline-block">🧩</span> Pipeline</a>
+<a class="active" href="leads.html"><span style="width:18px;display:inline-block">🧾</span> Leads</a>
+<a class="" href="lead-detail.html"><span style="width:18px;display:inline-block">🔎</span> Lead Detail</a>
+<a class="" href="lead-form.html"><span style="width:18px;display:inline-block">📝</span> Lead Form</a>
+<a class="" href="pricing.html"><span style="width:18px;display:inline-block">🧮</span> Pricing & Calculator</a>
+<div class="section">MPP (Manpower)</div>
+<a class="" href="mpp.html"><span style="width:18px;display:inline-block">👥</span> MPP Dashboard</a>
+<a class="" href="mpp-demand.html"><span style="width:18px;display:inline-block">📌</span> Kebutuhan vs Siap</a>
+<a class="" href="mpp-candidates.html"><span style="width:18px;display:inline-block">📋</span> Candidates</a>
+<a class="" href="mpp-candidate-detail.html"><span style="width:18px;display:inline-block">🔎</span> Candidate Detail</a>
+<a class="" href="mpp-form.html"><span style="width:18px;display:inline-block">🧑‍⚕️</span> Candidate Form</a>
+<div class="section">Catatan</div>
+<div style="padding:0 12px 14px 12px" class="muted">Prototype UI untuk presentasi (tanpa backend). Implementasi Yii2: GridView, ActiveForm, kalkulasi corporate scoring & management fee, pipeline, serta dashboard ringkasan.</div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="navbar">
+      <div style="display:flex;flex-direction:column;gap:2px">
+        <div><b>ClinicOps Prototype</b></div>
+        <div class="muted">Demo UI • fokus: Sales Lead & MPP</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px">
+        <div class="search">
+          🔎 <input placeholder="Cari perusahaan / kandidat / lokasi…">
+        </div>
+        <div class="toolbar">
+          <a class="btn btn-outline" href="leads.html">Leads</a>
+          <a class="btn btn-outline" href="mpp.html">MPP</a>
+          <a class="btn btn-primary" href="lead-form.html">Add</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="card">
+  <div class="card-header">
+    <span>Leads • List & Filters</span>
+    <span class="badge badge-info">Tampilan real untuk validasi user</span>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col">
+        <div class="muted">Stage</div>
+        <select style="width:100%;padding:8px;border:1px solid var(--border);border-radius:4px">
+          <option>All</option><option>New</option><option>Contacted</option><option>Survey Lokasi</option>
+          <option>Pricing Dikirim</option><option>Negosiasi</option><option>Won</option><option>Lost</option>
+        </select>
+      </div>
+      <div class="col">
+        <div class="muted">Kategori Klinik</div>
+        <select style="width:100%;padding:8px;border:1px solid var(--border);border-radius:4px">
+          <option>All</option><option>Klinik Umum</option><option>Klinik BPJS</option><option>Klinik Elite</option>
+        </select>
+      </div>
+      <div class="col">
+        <div class="muted">Proposal Deadline</div>
+        <select style="width:100%;padding:8px;border:1px solid var(--border);border-radius:4px">
+          <option>All</option><option>≤ 7 hari</option><option>≤ 14 hari</option><option>≤ 30 hari</option>
+        </select>
+      </div>
+      <div class="col">
+        <div class="muted">Owner</div>
+        <select style="width:100%;padding:8px;border:1px solid var(--border);border-radius:4px">
+          <option>All</option><option>Rina</option><option>Budi</option><option>Andi</option>
+        </select>
+      </div>
+    </div>
+
+    <div style="margin-top:12px" class="row">
+      <div class="col">
+        <span class="badge badge-info">Tip</span>
+        <span class="muted">Di Yii2, filter di atas jadi GridView filters + query builder.</span>
+      </div>
+      <div class="col" style="text-align:right">
+        <a class="btn btn-outline" href="lead-form.html">Open Lead Form</a>
+        <a class="btn btn-primary" href="pricing.html">Open Pricing</a>
+      </div>
+    </div>
+
+    <div style="margin-top:12px">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Industry</th>
+            <th>Lokasi / Sites</th>
+            <th>Employees</th>
+            <th>Kategori</th>
+            <th>Stage</th>
+            <th>Pipeline Value</th>
+            <th>Proposal Due</th>
+            <th>Deploy Target</th>
+            <th>Score</th>
+            <th>Corp Cat</th>
+            <th>Mgmt Fee</th>
+            <th>Owner</th>
+            <th>Next Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>PT Sinar Abadi</b><br><span class="muted">Manufacturing</span></td>
+            <td>Manufacturing</td>
+            <td>Bekasi • 3 sites</td>
+            <td>1,200</td>
+            <td><span class="badge badge-info">BPJS</span></td>
+            <td><span class="badge badge-warning">Pricing Dikirim</span></td>
+            <td>Rp 3.245 M</td>
+            <td>2026-01-05</td>
+            <td>2026-02-01</td>
+            <td><span class="badge badge-success">82</span></td>
+            <td><span class="badge badge-success">A</span></td>
+            <td>7% • Rp 1,4 jt</td>
+            <td>Rina</td>
+            <td>Call + revise pricing template</td>
+          </tr>
+
+          <tr>
+            <td><b>Office Tower X</b><br><span class="muted">Property</span></td>
+            <td>Property</td>
+            <td>Jakarta • 1 site</td>
+            <td>3,500</td>
+            <td><span class="badge badge-success">Elite</span></td>
+            <td><span class="badge badge-warning">Negosiasi</span></td>
+            <td>Rp 1.200 M</td>
+            <td>2026-01-12</td>
+            <td>2026-03-01</td>
+            <td><span class="badge badge-success">76</span></td>
+            <td><span class="badge badge-warning">B</span></td>
+            <td>6% • Rp 2,0 jt</td>
+            <td>Budi</td>
+            <td>Finalize SLA & timeline</td>
+          </tr>
+
+          <tr>
+            <td><b>SMA Harapan</b><br><span class="muted">Education</span></td>
+            <td>Education</td>
+            <td>Surabaya • 1 site</td>
+            <td>650</td>
+            <td><span class="badge">Umum</span></td>
+            <td><span class="badge badge-info">Survey Lokasi</span></td>
+            <td>Rp 95 jt</td>
+            <td>2025-12-28</td>
+            <td>2026-01-20</td>
+            <td><span class="badge badge-warning">58</span></td>
+            <td><span class="badge badge-danger">C</span></td>
+            <td>10% • Rp 2,0 jt</td>
+            <td>Andi</td>
+            <td>Upload site photo + confirm room size</td>
+          </tr>
+
+          <tr>
+            <td><b>PT Logistik Maju</b><br><span class="muted">Logistics</span></td>
+            <td>Logistics</td>
+            <td>Semarang • 2 sites</td>
+            <td>900</td>
+            <td><span class="badge">Umum</span></td>
+            <td><span class="badge badge-info">Contacted</span></td>
+            <td>Rp 130 jt</td>
+            <td>2026-01-20</td>
+            <td>2026-02-15</td>
+            <td><span class="badge badge-warning">61</span></td>
+            <td><span class="badge badge-warning">B</span></td>
+            <td>8% • Rp 1,6 jt</td>
+            <td>Rina</td>
+            <td>Schedule survey + manpower confirmation</td>
+          </tr>
+
+          <tr>
+            <td><b>Kampus Y</b><br><span class="muted">Education</span></td>
+            <td>Education</td>
+            <td>Bandung • 1 site</td>
+            <td>2,000</td>
+            <td><span class="badge badge-info">BPJS</span></td>
+            <td><span class="badge badge-danger">Lost</span></td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td><span class="badge">—</span></td>
+            <td>Budi</td>
+            <td>Archive + capture reason lost</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="muted" style="margin-top:8px">
+        Kolom Score berasal dari Lead Qualification & Scoring (Strategic Alignment, Internal Champion, Budget fit, dsb).
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <div class="card-header">
+        <span>Lead Detail Snapshot (contoh)</span>
+        <span class="badge">Quick view</span>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <div class="muted">PIC</div>
+            <div><b>Agus Santoso</b> • HR Manager</div>
+            <div class="muted">agus@sinarabadi.co.id • +62 812-xxxx-xxxx</div>
+          </div>
+          <div class="col">
+            <div class="muted">On-site clinic</div>
+            <div><b>Yes</b> • 24/7 • 3 sites</div>
+            <div class="muted">Doctors 2 • Nurses 6 • Admin 1</div>
+          </div>
+          <div class="col">
+            <div class="muted">Budget</div>
+            <div><b>SDM</b> Rp 150 jt/bln • <b>Drug</b> Rp 50 jt/bln</div>
+            <div class="muted">OH Rp 40 jt/bln • MCU Rp 25 jt</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">© 2026 ClinicOps • Prototype UI (no backend)</div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Proposal • ClinicOps</title>
+<link rel="stylesheet" href="assets/adminlte.css">
+</head>
+<body>
+<div class="wrapper">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">C</div>
+      <div>
+        <div class="title">ClinicOps</div>
+        <div class="sub">AdminLTE-style UI Mockup</div>
+      </div>
+    </div>
+    <div class="nav">
+      <div class="section">Phase 1</div>
+<a class="" href="index.html"><span style="width:18px;display:inline-block">📊</span> Dashboard</a>
+<a class="" href="leads.html"><span style="width:18px;display:inline-block">🧾</span> Leads</a>
+<a class="" href="lead-form.html"><span style="width:18px;display:inline-block">📝</span> Lead Form</a>
+<a class="" href="pricing.html"><span style="width:18px;display:inline-block">🧮</span> Pricing Calculator</a>
+<a class="active" href="proposal.html"><span style="width:18px;display:inline-block">📄</span> Proposal Preview</a>
+<a class="" href="settings.html"><span style="width:18px;display:inline-block">⚙️</span> Settings (Templates)</a>
+      <div class="section">Catatan</div>
+      <div style="padding:0 12px 14px 12px" class="muted">
+        Prototype UI untuk presentasi (tanpa backend). Implementasi Yii2:
+        <ul style="margin:8px 0 0 18px; padding:0">
+          <li>Leads list → GridView + filters</li>
+          <li>Lead form → ActiveForm + validation + upload</li>
+          <li>Pricing → template biaya + kalkulasi + audit log</li>
+          <li>Proposal → HTML preview + export PDF (mPDF)</li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="navbar">
+      <div style="display:flex;flex-direction:column;gap:2px">
+        <div><b>Phase 1:</b> Sales Lead • Pricing • Project Calculator</div>
+        <div class="muted">Demo UI • validasi alur & kebutuhan sebelum coding.</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px">
+        <div class="search">
+          🔎 <input placeholder="Cari perusahaan / lokasi / PIC…">
+        </div>
+        <div class="toolbar">
+          <button class="btn btn-outline">Export</button>
+          <button class="btn btn-primary">Add Lead</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      
+<div class="card">
+  <div class="card-header">
+    <span>Proposal Preview • PT Sinar Abadi</span>
+    <span class="badge badge-info">HTML preview → Export PDF (mPDF)</span>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col">
+        <div class="muted">Client</div>
+        <div><b>PT Sinar Abadi</b> (Manufacturing)</div>
+        <div class="muted">Lokasi: Bekasi, Cikarang • Site: 3 • Karyawan: 1,200</div>
+      </div>
+      <div class="col">
+        <div class="muted">Scope</div>
+        <div>On-site Clinic <b>24/7</b> • Klinik <b>BPJS</b></div>
+        <div class="muted">Doctors 2 • Nurses 6 • Drug supply • OH services</div>
+      </div>
+      <div class="col">
+        <div class="muted">Timeline</div>
+        <div>Target deployment: <b>2026-02-01</b></div>
+        <div class="muted">Proposal valid: 14 hari</div>
+      </div>
+      <div class="col" style="text-align:right">
+        <a class="btn btn-outline" href="pricing.html">Back</a>
+        <button class="btn btn-primary">Export PDF</button>
+      </div>
+    </div>
+
+    
+<div class="card" style="margin-top:12px">
+  <div class="card-header">Corporate Category & Management Fee</div>
+  <div class="card-body">
+    <table class="table">
+      <thead><tr><th>Item</th><th>Value</th></tr></thead>
+      <tbody>
+        <tr><td>Corporate Category</td><td><span class="badge" id="proposal_corp_cat">—</span></td></tr>
+        <tr><td>Management Fee (%)</td><td><span class="badge badge-info" id="proposal_fee_pct">—</span></td></tr>
+        <tr><td>Monthly Management Fee</td><td><span class="badge badge-success" id="proposal_fee_amt">—</span></td></tr>
+      </tbody>
+    </table>
+    <div class="muted">Data ini mengikuti hasil kalkulasi di halaman Pricing.</div>
+  </div>
+</div>
+
+<div class="card" style="margin-top:12px">
+      <div class="card-header">Ringkasan Biaya</div>
+      <div class="card-body">
+        <table class="table">
+          <thead><tr><th>Komponen</th><th>Nilai</th><th>Catatan</th></tr></thead>
+          <tbody>
+            <tr><td>Setup Cost (sekali)</td><td>Rp 365 jt</td><td>Renovasi + furniture + alat + IT</td></tr>
+            <tr><td>Recurring / bulan</td><td>Rp 240 jt</td><td>SDM + obat + OH</td></tr>
+            <tr><td>Contract Duration</td><td>12 bulan</td><td>Renewal by agreement</td></tr>
+            <tr><td><b>Total Kontrak</b></td><td><b>Rp 3.245 M</b></td><td>Excluding tax (if applicable)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">Scope of Services (Ringkas)</div>
+      <div class="card-body">
+        <table class="table">
+          <thead><tr><th>Area</th><th>Detail</th></tr></thead>
+          <tbody>
+            <tr><td>Clinic Setup</td><td>Ruang pemeriksaan, tindakan, farmasi, lab ringan, sistem antrian, integrasi BPJS</td></tr>
+            <tr><td>Manpower</td><td>2 dokter, 6 perawat, 1 admin (24/7 shift)</td></tr>
+            <tr><td>Drugs & Consumables</td><td>Supply obat bulanan sesuai budget & konsumsi</td></tr>
+            <tr><td>OH Services</td><td>Program quarterly: hearing test, spirometry, counseling</td></tr>
+            <tr><td>Reporting</td><td>Laporan bulanan utilisasi klinik, pemakaian obat, dan summary OH</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">Implementation Plan (contoh)</div>
+      <div class="card-body">
+        <table class="table">
+          <thead><tr><th>Week</th><th>Aktivitas</th><th>Output</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Survey final, confirm scope, finalize layout</td><td>Scope document + BoQ</td></tr>
+            <tr><td>2–4</td><td>Renovasi & procurement alat/furniture</td><td>Ready site + installation</td></tr>
+            <tr><td>3–6</td><td>Recruitment & onboarding manpower</td><td>Roster & SOP</td></tr>
+            <tr><td>6</td><td>Go-live</td><td>Operational start</td></tr>
+          </tbody>
+        </table>
+        <div class="muted" style="margin-top:8px">
+          Di implementasi nyata: timeline menyesuaikan hasil survey, ketersediaan alat, dan proses perizinan.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div class="footer">© 2026 ClinicOps • Prototype UI (no backend)</div>
+    </div>
+  </main>
+</div>
+
+<script>
+(function(){
+  function setText(id, val){
+    const el = document.getElementById(id);
+    if(el) el.textContent = val;
+  }
+  const cat = localStorage.getItem("demo_corp_cat") || "C";
+  const pct = localStorage.getItem("demo_fee_pct") || "—";
+  const amt = localStorage.getItem("demo_fee_amt") || "—";
+  setText("proposal_corp_cat", cat);
+  setText("proposal_fee_pct", pct);
+  setText("proposal_fee_amt", amt);
+
+  const cEl = document.getElementById("proposal_corp_cat");
+  if(cEl){
+    cEl.className = "badge " + (cat==="A" ? "badge-success" : (cat==="B" ? "badge-warning" : "badge-danger"));
+  }
+})();
+</script>
+</body>
+</html>

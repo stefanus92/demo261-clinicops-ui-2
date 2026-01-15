@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pipeline • ClinicOps</title>
+<link rel="stylesheet" href="assets/adminlte.css">
+</head>
+<body>
+<div class="wrapper">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">C</div>
+      <div>
+        <div class="title">ClinicOps</div>
+        <div class="sub">Demo UI • fokus: Sales Lead & MPP</div>
+      </div>
+    </div>
+    <div class="nav">
+      <div class="section">Sales Lead & Pricing</div>
+<a class="" href="index.html"><span style="width:18px;display:inline-block">📊</span> Dashboard (Sales)</a>
+<a class="active" href="pipeline.html"><span style="width:18px;display:inline-block">🧩</span> Pipeline</a>
+<a class="" href="leads.html"><span style="width:18px;display:inline-block">🧾</span> Leads</a>
+<a class="" href="lead-detail.html"><span style="width:18px;display:inline-block">🔎</span> Lead Detail</a>
+<a class="" href="lead-form.html"><span style="width:18px;display:inline-block">📝</span> Lead Form</a>
+<a class="" href="pricing.html"><span style="width:18px;display:inline-block">🧮</span> Pricing & Calculator</a>
+<div class="section">MPP (Manpower)</div>
+<a class="" href="mpp.html"><span style="width:18px;display:inline-block">👥</span> MPP Dashboard</a>
+<a class="" href="mpp-demand.html"><span style="width:18px;display:inline-block">📌</span> Kebutuhan vs Siap</a>
+<a class="" href="mpp-candidates.html"><span style="width:18px;display:inline-block">📋</span> Candidates</a>
+<a class="" href="mpp-candidate-detail.html"><span style="width:18px;display:inline-block">🔎</span> Candidate Detail</a>
+<a class="" href="mpp-form.html"><span style="width:18px;display:inline-block">🧑‍⚕️</span> Candidate Form</a>
+<div class="section">Catatan</div>
+<div style="padding:0 12px 14px 12px" class="muted">Prototype UI untuk presentasi (tanpa backend). Implementasi Yii2: GridView, ActiveForm, kalkulasi corporate scoring & management fee, pipeline, serta dashboard ringkasan.</div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="navbar">
+      <div style="display:flex;flex-direction:column;gap:2px">
+        <div><b>ClinicOps Prototype</b></div>
+        <div class="muted">Demo UI • fokus: Sales Lead & MPP</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px">
+        <div class="search">
+          🔎 <input placeholder="Cari perusahaan / kandidat / lokasi…">
+        </div>
+        <div class="toolbar">
+          <a class="btn btn-outline" href="leads.html">Leads</a>
+          <a class="btn btn-outline" href="mpp.html">MPP</a>
+          <a class="btn btn-primary" href="lead-form.html">Add</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <div class="card-header">
+        <span>Sales Pipeline (Ringkas)</span>
+        <span class="badge badge-info">Mudah dibaca CEO</span>
+      </div>
+      <div class="card-body">
+        <div class="muted">Tampilan ini menunjukkan posisi setiap calon klien dalam proses kerja.</div>
+        <div style="display:flex;gap:10px;overflow:auto;padding:10px 2px;margin-top:10px">
+          <div class="card" style="min-width:220px">
+            <div class="card-header">Baru Masuk <span class="badge">42</span></div>
+            <div class="card-body">
+              <div class="card" style="margin-bottom:8px"><div class="card-body">
+                <b>PT Sinar Abadi</b><div class="muted">Bekasi • BPJS</div>
+                <div style="margin-top:6px"><span class="badge badge-success">A</span> <span class="badge badge-warning">Deadline 7 hari</span></div>
+              </div></div>
+              <div class="card" style="margin-bottom:8px"><div class="card-body">
+                <b>Sekolah ABC</b><div class="muted">Jakarta • Umum</div>
+                <div style="margin-top:6px"><span class="badge badge-warning">B</span></div>
+              </div></div>
+              <a class="btn btn-outline" href="leads.html" style="width:100%">Lihat Semua</a>
+            </div>
+          </div>
+
+          <div class="card" style="min-width:220px">
+            <div class="card-header">Dihubungi <span class="badge">31</span></div>
+            <div class="card-body">
+              <div class="card" style="margin-bottom:8px"><div class="card-body">
+                <b>PT Logistik Maju</b><div class="muted">Semarang • Umum</div>
+                <div style="margin-top:6px"><span class="badge badge-warning">B</span></div>
+              </div></div>
+              <div class="card" style="margin-bottom:8px"><div class="card-body">
+                <b>Kantor XYZ</b><div class="muted">Surabaya • Umum</div>
+                <div style="margin-top:6px"><span class="badge badge-danger">C</span></div>
+              </div></div>
+            </div>
+          </div>
+
+          <div class="card" style="min-width:220px">
+            <div class="card-header">Survey <span class="badge">19</span></div>
+            <div class="card-body">
+              <div class="card" style="margin-bottom:8px"><div class="card-body">
+                <b>Office Tower X</b><div class="muted">Jakarta • Elite</div>
+                <div style="margin-top:6px"><span class="badge badge-success">A</span></div>
+              </div></div>
+              <div class="muted">Menunggu foto/layout</div>
+            </div>
+          </div>
+
+          <div class="card" style="min-width:220px">
+            <div class="card-header">Harga Dikirim <span class="badge">14</span></div>
+            <div class="card-body">
+              <div class="card" style="margin-bottom:8px"><div class="card-body">
+                <b>PT Sinar Abadi</b><div class="muted">Bekasi</div>
+                <div style="margin-top:6px"><span class="badge badge-success">A</span> <span class="badge badge-warning">Follow-up</span></div>
+              </div></div>
+              <a class="btn btn-primary" href="lead-detail.html" style="width:100%">Buka Detail</a>
+            </div>
+          </div>
+
+          <div class="card" style="min-width:220px">
+            <div class="card-header">Negosiasi <span class="badge">9</span></div>
+            <div class="card-body">
+              <div class="card" style="margin-bottom:8px"><div class="card-body">
+                <b>Office Tower X</b><div class="muted">Jakarta</div>
+                <div style="margin-top:6px"><span class="badge badge-success">A</span></div>
+              </div></div>
+              <div class="muted">Revisi SLA & biaya</div>
+            </div>
+          </div>
+
+          <div class="card" style="min-width:220px">
+            <div class="card-header">Deal <span class="badge badge-success">4</span></div>
+            <div class="card-body">
+              <div class="card" style="margin-bottom:8px"><div class="card-body">
+                <b>PT Manufaktur Jaya</b><div class="muted">Cikarang • BPJS</div>
+                <div style="margin-top:6px"><span class="badge badge-warning">B</span></div>
+              </div></div>
+              <div class="muted">Siap kickoff</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:10px;text-align:right">
+          <a class="btn btn-outline" href="leads.html">Daftar Leads</a>
+          <a class="btn btn-primary" href="pricing.html">Buka Kalkulator</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div class="footer">© 2026 ClinicOps • Prototype UI (no backend)</div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

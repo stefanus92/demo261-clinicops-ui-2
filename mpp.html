@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MPP Dashboard • ClinicOps</title>
+<link rel="stylesheet" href="assets/adminlte.css">
+</head>
+<body>
+<div class="wrapper">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">C</div>
+      <div>
+        <div class="title">ClinicOps</div>
+        <div class="sub">Demo UI • fokus: Sales Lead & MPP</div>
+      </div>
+    </div>
+    <div class="nav">
+      <div class="section">Sales Lead & Pricing</div>
+<a class="" href="index.html"><span style="width:18px;display:inline-block">📊</span> Dashboard (Sales)</a>
+<a class="" href="pipeline.html"><span style="width:18px;display:inline-block">🧩</span> Pipeline</a>
+<a class="" href="leads.html"><span style="width:18px;display:inline-block">🧾</span> Leads</a>
+<a class="" href="lead-detail.html"><span style="width:18px;display:inline-block">🔎</span> Lead Detail</a>
+<a class="" href="lead-form.html"><span style="width:18px;display:inline-block">📝</span> Lead Form</a>
+<a class="" href="pricing.html"><span style="width:18px;display:inline-block">🧮</span> Pricing & Calculator</a>
+<div class="section">MPP (Manpower)</div>
+<a class="active" href="mpp.html"><span style="width:18px;display:inline-block">👥</span> MPP Dashboard</a>
+<a class="" href="mpp-demand.html"><span style="width:18px;display:inline-block">📌</span> Kebutuhan vs Siap</a>
+<a class="" href="mpp-candidates.html"><span style="width:18px;display:inline-block">📋</span> Candidates</a>
+<a class="" href="mpp-candidate-detail.html"><span style="width:18px;display:inline-block">🔎</span> Candidate Detail</a>
+<a class="" href="mpp-form.html"><span style="width:18px;display:inline-block">🧑‍⚕️</span> Candidate Form</a>
+<div class="section">Catatan</div>
+<div style="padding:0 12px 14px 12px" class="muted">Prototype UI untuk presentasi (tanpa backend). Implementasi Yii2: GridView, ActiveForm, kalkulasi corporate scoring & management fee, pipeline, serta dashboard ringkasan.</div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="navbar">
+      <div style="display:flex;flex-direction:column;gap:2px">
+        <div><b>ClinicOps Prototype</b></div>
+        <div class="muted">Demo UI • fokus: Sales Lead & MPP</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px">
+        <div class="search">
+          🔎 <input placeholder="Cari perusahaan / kandidat / lokasi…">
+        </div>
+        <div class="toolbar">
+          <a class="btn btn-outline" href="leads.html">Leads</a>
+          <a class="btn btn-outline" href="mpp.html">MPP</a>
+          <a class="btn btn-primary" href="mpp-form.html">Add</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+  <div class="col small-box bg-info">
+    <h3>86</h3>
+    <p>Total Kandidat Aktif</p>
+    <div class="meta">Dokter • Perawat • EMT • Admin</div>
+  </div>
+  <div class="col small-box bg-success">
+    <h3>24</h3>
+    <p>Siap Ditempatkan</p>
+    <div class="meta">Dokumen & sertifikat lengkap</div>
+  </div>
+  <div class="col small-box bg-warning">
+    <h3>18</h3>
+    <p>Menunggu Interview</p>
+    <div class="meta">Perlu jadwal</div>
+  </div>
+  <div class="col small-box bg-danger">
+    <h3>12</h3>
+    <p>Perlu Sertifikasi</p>
+    <div class="meta">ACLS / EMT</div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <div class="card-header">
+        <span>Status Proses Kandidat</span>
+        <span class="badge badge-info">Ringkasan</span>
+      </div>
+      <div class="card-body">
+        <table class="table">
+          <thead><tr><th>Tahap</th><th>Jumlah</th><th>Catatan</th></tr></thead>
+          <tbody>
+            <tr><td>Applied (Masuk)</td><td>28</td><td>Belum disaring</td></tr>
+            <tr><td>Screening</td><td>22</td><td>Verifikasi dokumen</td></tr>
+            <tr><td>Interview</td><td>18</td><td>Menunggu jadwal/hasil</td></tr>
+            <tr><td>Passed</td><td>14</td><td>Lulus interview</td></tr>
+            <tr><td>Offer</td><td>10</td><td>Menunggu konfirmasi</td></tr>
+            <tr><td>Joined</td><td>12</td><td>Siap ditempatkan</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:10px;text-align:right">
+          <a class="btn btn-outline" href="mpp-candidates.html">Lihat Semua Kandidat</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span>Kebutuhan vs Ketersediaan (Contoh)</span>
+        <span class="badge">Per lokasi</span>
+      </div>
+      <div class="card-body">
+        <table class="table">
+          <thead><tr><th>Role</th><th>Butuh</th><th>Siap</th><th>Gap</th></tr></thead>
+          <tbody>
+            <tr><td>Dokter</td><td>6</td><td>4</td><td><span class="badge badge-warning">-2</span></td></tr>
+            <tr><td>Perawat</td><td>18</td><td>14</td><td><span class="badge badge-warning">-4</span></td></tr>
+            <tr><td>EMT</td><td>6</td><td>3</td><td><span class="badge badge-danger">-3</span></td></tr>
+            <tr><td>Admin</td><td>6</td><td>6</td><td><span class="badge badge-success">0</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card">
+      <div class="card-header">
+        <span>Status Sertifikasi</span>
+        <span class="badge badge-success">ACLS • EMT</span>
+      </div>
+      <div class="card-body">
+        <table class="table">
+          <thead><tr><th>Sertifikasi</th><th>Sudah</th><th>Belum</th><th>Catatan</th></tr></thead>
+          <tbody>
+            <tr><td>ACLS</td><td><b>19</b></td><td><b>8</b></td><td>Prioritas klinik 24/7</td></tr>
+            <tr><td>EMT</td><td><b>15</b></td><td><b>12</b></td><td>Perlu training</td></tr>
+          </tbody>
+        </table>
+        <div class="card" style="margin-top:12px">
+          <div class="card-header">Reminder (Contoh)</div>
+          <div class="card-body">
+            <ul style="margin:0 0 0 18px;padding:0">
+              <li>5 kandidat: jadwal interview belum dibuat</li>
+              <li>3 kandidat: ACLS akan expired dalam 60 hari</li>
+              <li>4 kandidat: belum upload dokumen wajib</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">© 2026 ClinicOps • Prototype UI (no backend)</div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

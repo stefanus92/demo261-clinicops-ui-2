@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard (Sales) • ClinicOps</title>
+<link rel="stylesheet" href="assets/adminlte.css">
+</head>
+<body>
+<div class="wrapper">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">C</div>
+      <div>
+        <div class="title">ClinicOps</div>
+        <div class="sub">Demo UI • fokus: Sales Lead & MPP</div>
+      </div>
+    </div>
+    <div class="nav">
+      <div class="section">Sales Lead & Pricing</div>
+<a class="active" href="index.html"><span style="width:18px;display:inline-block">📊</span> Dashboard (Sales)</a>
+<a class="" href="pipeline.html"><span style="width:18px;display:inline-block">🧩</span> Pipeline</a>
+<a class="" href="leads.html"><span style="width:18px;display:inline-block">🧾</span> Leads</a>
+<a class="" href="lead-detail.html"><span style="width:18px;display:inline-block">🔎</span> Lead Detail</a>
+<a class="" href="lead-form.html"><span style="width:18px;display:inline-block">📝</span> Lead Form</a>
+<a class="" href="pricing.html"><span style="width:18px;display:inline-block">🧮</span> Pricing & Calculator</a>
+<div class="section">MPP (Manpower)</div>
+<a class="" href="mpp.html"><span style="width:18px;display:inline-block">👥</span> MPP Dashboard</a>
+<a class="" href="mpp-demand.html"><span style="width:18px;display:inline-block">📌</span> Kebutuhan vs Siap</a>
+<a class="" href="mpp-candidates.html"><span style="width:18px;display:inline-block">📋</span> Candidates</a>
+<a class="" href="mpp-candidate-detail.html"><span style="width:18px;display:inline-block">🔎</span> Candidate Detail</a>
+<a class="" href="mpp-form.html"><span style="width:18px;display:inline-block">🧑‍⚕️</span> Candidate Form</a>
+<div class="section">Catatan</div>
+<div style="padding:0 12px 14px 12px" class="muted">Prototype UI untuk presentasi (tanpa backend). Implementasi Yii2: GridView, ActiveForm, kalkulasi corporate scoring & management fee, pipeline, serta dashboard ringkasan.</div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="navbar">
+      <div style="display:flex;flex-direction:column;gap:2px">
+        <div><b>ClinicOps Prototype</b></div>
+        <div class="muted">Demo UI • fokus: Sales Lead & MPP</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px">
+        <div class="search">
+          🔎 <input placeholder="Cari perusahaan / kandidat / lokasi…">
+        </div>
+        <div class="toolbar">
+          <a class="btn btn-outline" href="leads.html">Leads</a>
+          <a class="btn btn-outline" href="mpp.html">MPP</a>
+          <a class="btn btn-primary" href="lead-form.html">Add</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+  <div class="col small-box bg-info">
+    <h3>128</h3>
+    <p>Total Calon Klien</p>
+    <div class="meta">Yang sedang diproses</div>
+  </div>
+  <div class="col small-box bg-success">
+    <h3>Rp 8,4 M</h3>
+    <p>Perkiraan Nilai Proyek</p>
+    <div class="meta">Dari semua calon klien</div>
+  </div>
+  <div class="col small-box bg-warning">
+    <h3>9</h3>
+    <p>Butuh Kirim Penawaran (≤ 7 hari)</p>
+    <div class="meta">Prioritas kerja minggu ini</div>
+  </div>
+  <div class="col small-box bg-danger">
+    <h3>4</h3>
+    <p>Sudah Deal (bulan ini)</p>
+    <div class="meta">Siap masuk pelaksanaan</div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <div class="card-header">
+        <span>Tahapan Pekerjaan (Ringkas)</span>
+        <span class="badge badge-info">Mudah dipahami</span>
+      </div>
+      <div class="card-body">
+        <table class="table">
+          <thead><tr><th>Tahap</th><th>Jumlah</th><th>Catatan</th><th>Aksi</th></tr></thead>
+          <tbody>
+            <tr><td>Baru Masuk</td><td>42</td><td>Belum ditindaklanjuti</td><td>Kontak awal</td></tr>
+            <tr><td>Sudah Dihubungi</td><td>31</td><td>Kumpulkan kebutuhan</td><td>Jadwalkan survey</td></tr>
+            <tr><td>Survey Lokasi</td><td>19</td><td>Tunggu data lengkap</td><td>Upload foto/layout</td></tr>
+            <tr><td>Harga Dikirim</td><td>14</td><td>Tunggu respon</td><td>Follow-up</td></tr>
+            <tr><td>Negosiasi</td><td>9</td><td>Hampir deal</td><td>Finalisasi</td></tr>
+            <tr><td><b>Deal</b></td><td><b>4</b></td><td><b>Siap jalan</b></td><td>Kickoff</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span>Prioritas Minggu Ini</span>
+        <span class="badge badge-warning">Deadline dekat</span>
+      </div>
+      <div class="card-body">
+        <table class="table">
+          <thead><tr><th>Perusahaan</th><th>Lokasi</th><th>Kategori</th><th>Tahap</th><th>Deadline</th><th>PIC</th></tr></thead>
+          <tbody>
+            <tr><td><b>PT Sinar Abadi</b></td><td>Bekasi</td><td><span class="badge badge-info">BPJS</span></td><td><span class="badge badge-warning">Harga Dikirim</span></td><td>2026-01-05</td><td>Rina</td></tr>
+            <tr><td><b>Office Tower X</b></td><td>Jakarta</td><td><span class="badge badge-success">Elite</span></td><td><span class="badge badge-warning">Negosiasi</span></td><td>2026-01-12</td><td>Budi</td></tr>
+            <tr><td><b>PT Logistik Maju</b></td><td>Semarang</td><td><span class="badge">Umum</span></td><td><span class="badge badge-info">Sudah Dihubungi</span></td><td>2026-01-20</td><td>Rina</td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:10px;text-align:right">
+          <a class="btn btn-outline" href="leads.html">Lihat Leads</a>
+          <a class="btn btn-primary" href="pricing.html">Hitung Biaya</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card">
+      <div class="card-header">
+        <span>Prioritas Perusahaan (A / B / C)</span>
+        <span class="badge">Corporate Scoring</span>
+      </div>
+      <div class="card-body">
+        <table class="table">
+          <thead><tr><th>Kategori</th><th>Makna</th><th>Jumlah</th></tr></thead>
+          <tbody>
+            <tr><td><span class="badge badge-success">A</span></td><td>Prioritas tinggi</td><td><b>18</b></td></tr>
+            <tr><td><span class="badge badge-warning">B</span></td><td>Prioritas sedang</td><td><b>57</b></td></tr>
+            <tr><td><span class="badge badge-danger">C</span></td><td>Prioritas rendah</td><td><b>53</b></td></tr>
+          </tbody>
+        </table>
+        <div class="muted" style="margin-top:8px">Kategori dihitung otomatis dari faktor perusahaan.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span>Ringkasan Biaya (Contoh)</span>
+        <span class="badge badge-success">Calculator</span>
+      </div>
+      <div class="card-body">
+        <table class="table">
+          <thead><tr><th>Item</th><th>Nilai</th></tr></thead>
+          <tbody>
+            <tr><td>Biaya Awal</td><td>Rp 365 jt</td></tr>
+            <tr><td>Biaya Bulanan</td><td>Rp 240 jt</td></tr>
+            <tr><td>Fee Manajemen</td><td>7% • Rp 1,4 jt</td></tr>
+            <tr><td><b>Total Estimasi Kontrak</b></td><td><b>Rp 3,245 M</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">© 2026 ClinicOps • Prototype UI (no backend)</div>
+    </div>
+  </main>
+</div>
+</body>
+</html>
